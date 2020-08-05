@@ -1,0 +1,12 @@
+-
+  source: 'ftp'
+  options:
+    host: 'ftp.datafeedwatch.com'
+    username: 'dfw_test'
+    password: 'defbj43u474DFF33rf'
+  file: 'feed.json'
+  parser: 'ParserJSON'
+-
+  source: 'web'
+  file: 'https://feeds.datafeedwatch.com/8946/87b1895fcf293e81cc27af931aa0c3c6d6b580d6.xml'
+  parser: 'ParserRSS'

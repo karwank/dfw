@@ -1,0 +1,12 @@
+[
+  {
+    "price":"234.0",
+    "title":"Product 1",
+    "full_url":"http://example.com/product-1"
+  },
+  {
+    "price":"123.0",
+    "title":"Product 2",
+    "full_url":"http://example.com/product-2"
+  }
+]

@@ -1,0 +1,52 @@
+version: '3'
+services:
+  app:
+    container_name: dfw-app
+    image: karwank/dfw-app
+    ports:
+      - '4567:4567'
+    volumes:
+      - ./app:/home/user/app
+    stdin_open: true
+    tty: true
+    depends_on:
+      - 'varnish'
+      - 'sinatra'
+  varnish:
+    container_name: dfw-varnish
+    build:
+      context: ./varnish
+      dockerfile: Dockerfile
+    environment:
+      VARNISHNCSA: 'true'
+    volumes:
+      - ./varnish/default.vcl:/etc/varnish/default.vcl
+      - ./app/varnishlog:/var/log/varnish
+    networks:
+      default:
+        aliases:
+          - host1.test
+          - host2.test
+          - host3.test
+          - host4.test
+          - host5.test
+          - host6.test
+          - host7.test
+          - host8.test
+          - host9.test
+          - host10.test
+          - host11.test
+          - host12.test
+          - host13.test
+          - host14.test
+          - host15.test
+          - host16.test
+          - host17.test
+          - host18.test
+          - host19.test
+          - host20.test
+  sinatra:
+    container_name: dfw-sinatra
+    build:
+      context: ./sinatra
+      dockerfile: Dockerfile

@@ -1,0 +1,21 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '~> 2.5.5'
+
+# http client
+gem 'httparty'
+# helps to analyze xml structure
+gem 'nokogiri'
+# activesupport has great method Hash.from_xml
+gem "activesupport"
+# pretty table
+gem 'terminal-table'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'faker'
+  gem 'sinatra'
+  gem 'webmock'
+  gem 'testftpd', git: 'https://github.com/christian-schulze/testftpd', branch: 'master'
+end
